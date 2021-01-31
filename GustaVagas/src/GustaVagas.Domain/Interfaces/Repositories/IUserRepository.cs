@@ -3,7 +3,7 @@ using GustaVagas.Domain.Interfaces.Repositories.Base;
 
 namespace GustaVagas.Domain.Interfaces.Repositories
 {
-    public interface IUserRepository : IRepository<User>
+    public interface IUserRepository : IRepository<Candidate>
     {
     }
 }
