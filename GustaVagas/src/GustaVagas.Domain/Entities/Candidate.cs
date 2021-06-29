@@ -14,12 +14,18 @@ namespace GustaVagas.Domain.Entities
         public string Name { get; set; }
         [StringLength(90)]
         public string Email { get; set; }
-        [StringLength(50)]
-        public string Password { get; set; }
         [StringLength(20)]
         public string Celular { get; set; }
         [StringLength(18)]
         public string TelefoneFixo { get; set; }
+        [Nullable] 
+        public string Instagram { get; set; }
+        [Nullable]
+        public string Linkedin { get; set; }
+        [Nullable]
+        public string Github { get; set; }
+        [Nullable]
+        public string YouTube { get; set; }
         [DataType("char(9)")]
         public string CEP { get; set; }
         [StringLength(80)]
@@ -49,8 +55,9 @@ namespace GustaVagas.Domain.Entities
         [StringLength(12)]
         public string Sexo { get; set; }
         [StringLength(6)]
-        public string JuniorPlenoSenior { get; set; }
-        public int LoginId { get; set; }
+        public string Senioridade { get; set; }
+        public Usuario Usuario { get; set; }
+        public int IdUsuario { get; set; }
         [DataType("decimal(15, 2)")]
         public decimal PretencaoSalarial { get; set; }
     }

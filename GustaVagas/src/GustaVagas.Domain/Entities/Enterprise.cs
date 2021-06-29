@@ -23,7 +23,7 @@ namespace GustaVagas.Domain.Entities
         [StringLength(20)]
         public string Celular { get; set; }
         [DataType("char(18)")]
-        public string CNPJ { get; set; }
+        public string CNPJ { get; set; }        
         [DataType("char(9)")]
         public string CEP { get; set; }
         [StringLength(80)]
@@ -36,6 +36,13 @@ namespace GustaVagas.Domain.Entities
         public string Estado { get; set; }
         [StringLength(16)]
         public string País { get; set; }
-        public int LoginId { get; set; }
+        public Usuario Usuario { get; set; }
+        public int IdUsuario { get
+            {
+                return IdUsuario; 
+            } set {
+                value = Usuario.Id
+            } 
+        }
     }
 }
