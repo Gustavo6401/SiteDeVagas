@@ -13,6 +13,8 @@ namespace GustaVagas.Domain.Entities
         [StringLength(255)]
         public string Nome { get; set; }
         public string Descricao { get; set; }
+        // O salário é uma ferramenta muito importante, pois ele pode ser o salário de um empregado, 
+        // o dinheiro de um freelancer ou o dinheiro pelo contrato de uma empresa.
         [DataType("decimal(15, 2)")]
         public decimal Salario { get; set; }
         public int NumeroVagas { get; set; }
@@ -23,14 +25,14 @@ namespace GustaVagas.Domain.Entities
         public bool Remoto { get; set; }
         public bool Temporario { get; set; }
         public bool Freelance { get; set; }
+        // Caso o candidato seja uma pessoa jurídica, ele poderá ativar esse filtro.
         public bool PessoaJuridica { get; set; }
         public Enterprise Enterprise { get; set; }
         public Cargo Cargo { get; set; }
         public Area Area { get; set; }
-        public int IdEnterprise { get { return IdEnterprise } set { Enterprise.Id } }
-        public int IdCargo { get { return IdCargo } set { Cargo.Id } }
-        public int IdArea { get { return IdArea } set { Area.Id } }
-
+        public int IdEnterprise { get; set; }
+        public int IdCargo { get; set; }
+        public int IdArea { get; set; }
     }
     public enum EstadoVaga
     {

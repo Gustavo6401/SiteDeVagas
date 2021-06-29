@@ -18,13 +18,9 @@ namespace GustaVagas.Domain.Entities
         public string Celular { get; set; }
         [StringLength(18)]
         public string TelefoneFixo { get; set; }
-        [Nullable] 
         public string Instagram { get; set; }
-        [Nullable]
         public string Linkedin { get; set; }
-        [Nullable]
         public string Github { get; set; }
-        [Nullable]
         public string YouTube { get; set; }
         [DataType("char(9)")]
         public string CEP { get; set; }
@@ -44,21 +40,23 @@ namespace GustaVagas.Domain.Entities
         [DataType("date")]
         public DateTime DataNascimento { get; set; }
         public bool EstáContratado { get; set; }
-        [DataType("varchar(max)")]
+        [DataType("nvarchar(max)")]
         public string DescricaoCandidato { get; set; }
         [StringLength(25)]
         public string Empresa { get; set; }
-        [StringLength(20)]
-        public string GrauAcademicoAtual { get; set; }
+        [StringLength(20)]        
+        public string Escolaridade { get; set; } // Escolaridade do candidato.
         [StringLength(10)]
         public string EstadoCivil { get; set; }
         [StringLength(12)]
         public string Sexo { get; set; }
         [StringLength(6)]
-        public string Senioridade { get; set; }
+        public string Senioridade { get; set; } // Se ele é trainee, operacional, júnior, pleno ou sênior.
         public Usuario Usuario { get; set; }
         public int IdUsuario { get; set; }
         [DataType("decimal(15, 2)")]
-        public decimal PretencaoSalarial { get; set; }
+        public decimal PretencaoSalarialMinima { get; set; }
+        [DataType("decimal(15, 2)")]
+        public decimal PretencaoSalarialMaxima { get; set; }
     }
 }

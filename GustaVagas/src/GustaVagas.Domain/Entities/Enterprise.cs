@@ -37,12 +37,6 @@ namespace GustaVagas.Domain.Entities
         [StringLength(16)]
         public string País { get; set; }
         public Usuario Usuario { get; set; }
-        public int IdUsuario { get
-            {
-                return IdUsuario; 
-            } set {
-                value = Usuario.Id
-            } 
-        }
+        public int IdUsuario { get; set; }
     }
 }
