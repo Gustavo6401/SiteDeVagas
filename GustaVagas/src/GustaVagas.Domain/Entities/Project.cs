@@ -4,7 +4,7 @@ using GustaVagas.Domain.Entities.Base;
 
 namespace GustaVagas.Domain.Entities 
 {
-    public class Project 
+    public class Project : Entity
     {
         public Project() : base() 
         {

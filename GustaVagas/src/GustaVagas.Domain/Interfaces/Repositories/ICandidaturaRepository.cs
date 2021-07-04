@@ -8,7 +8,7 @@ namespace GustaVagas.Domain.Interfaces.Repositories
     public interface ICandidaturaRepository : IRepository<Candidatura>
     {
         IEnumerable<Candidatura> PesquisarPorVaga(string vaga);
-        IEnumerable<Candidatura> PesquisarPorCandidato(string nome);
-        IEnumerable<Candidatura> PesquisarPorEmpresa(string nome);
+        IEnumerable<Candidatura> PesquisarPorCandidato(string nome, bool pessoaFisica);
+        IEnumerable<Candidatura> PesquisarPorEmpresa(string nome, bool pessoaJuridica);
     }
 }

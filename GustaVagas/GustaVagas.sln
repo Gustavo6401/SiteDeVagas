@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GustaVagas.Infra", "src\Gus
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GustaVagas.Service", "src\GustaVagas.Service\GustaVagas.Service.csproj", "{E80F3CF2-DBAB-4E3B-B54D-83286781144F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GustaVagas.Api", "src\GustaVagas.Api\GustaVagas.Api.csproj", "{D64FC3E3-26C0-412B-91BD-C1F85771A6EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GustaVagas.Api", "src\GustaVagas.Api\GustaVagas.Api.csproj", "{D64FC3E3-26C0-412B-91BD-C1F85771A6EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GustaVagas.Presentation.WebApplication", "GustaVagas.Presentation.WebApplication\GustaVagas.Presentation.WebApplication.csproj", "{4270AF29-9486-455E-86E9-303183BC8A2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D64FC3E3-26C0-412B-91BD-C1F85771A6EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D64FC3E3-26C0-412B-91BD-C1F85771A6EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D64FC3E3-26C0-412B-91BD-C1F85771A6EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4270AF29-9486-455E-86E9-303183BC8A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4270AF29-9486-455E-86E9-303183BC8A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4270AF29-9486-455E-86E9-303183BC8A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4270AF29-9486-455E-86E9-303183BC8A2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

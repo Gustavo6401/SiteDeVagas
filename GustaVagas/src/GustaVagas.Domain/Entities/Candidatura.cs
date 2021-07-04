@@ -21,7 +21,7 @@ namespace GustaVagas.Domain.Entities
         public Vaga Vaga { get; set; }
         public Candidate Candidato { get; set; }
         // Caso quem esteja oferecendo seja pessoa física.
-        public Candidate OferecedorPF { get; set; }
+        public Candidate ContratantePF { get; set; }
         public Enterprise Enterprise { get; set; }
         // Caso o candidato seja pessoa jurídica.
         public Enterprise CandidatoPJ { get; set; }

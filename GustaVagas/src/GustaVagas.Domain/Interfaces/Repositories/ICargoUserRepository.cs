@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using GustaVagas.Domain.Entities;
 using GustaVagas.Domain.Interfaces.Repositories.Base;
 
 namespace GustaVagas.Domain.Interfaces.Repositories
 {
-    public interface IAreaRepository
+    public interface ICargoUserRepository : IRepository<CargoUser>
     {
-        IEnumerable<Area> ProcurarPorNome(string nome);        
+        IEnumerable<CargoUser> BuscarPorCargo(string cargo);
     }
 }
