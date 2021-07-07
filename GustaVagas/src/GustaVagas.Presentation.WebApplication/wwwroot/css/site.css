@@ -72,7 +72,7 @@ body {
 }
 
 .navbar-horizontal {
-    /*float: left;*/
+    float: left;
     text-align: center;
     list-style-type: none;
     margin: 0;
@@ -81,15 +81,14 @@ body {
     background-color: deepskyblue;
 }
 
-.nav-item {
-    display: inline;
-    float: left;
-}
-
 .nav-link {
     display: block;
     padding: 8px;
     color: white;
+}
+
+.nav-item {
+    display: inline;
 }
 
 .corpo {
@@ -102,18 +101,7 @@ body {
     font-size: 60px;
 }
 
-.subtitulo {
-    color: navy;
-    font-size: 50px;
-}
-
 .textao {
     color: navy;
-    font-size: 25px;
-}
-
-img {
-    width: 100%;
-    height: auto;
-    float: left;
+    font-size: 15px;
 }
