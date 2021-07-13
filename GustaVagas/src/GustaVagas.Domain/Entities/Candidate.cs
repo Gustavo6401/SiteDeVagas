@@ -53,7 +53,7 @@ namespace GustaVagas.Domain.Entities
         [StringLength(6)]
         public string Senioridade { get; set; } // Se ele é trainee, operacional, júnior, pleno ou sênior.
         public Usuario Usuario { get; set; }
-        public int IdUsuario { get; set; }
+        //public int IdUsuario { get; set; }
         [DataType("decimal(15, 2)")]
         public decimal PretencaoSalarialMinima { get; set; }
         [DataType("decimal(15, 2)")]

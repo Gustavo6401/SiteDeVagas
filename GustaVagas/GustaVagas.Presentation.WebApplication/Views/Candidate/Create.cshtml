@@ -1,0 +1,169 @@
+﻿@model GustaVagas.Domain.Entities.Candidate
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="titulo">Cadastrar</h1>
+
+<h4 class="subtitulo">Pessoa Física</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Nome Completo</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">E-Mail</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Celular" class="control-label"></label>
+                <input asp-for="Celular" class="form-control" />
+                <span asp-validation-for="Celular" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelefoneFixo" class="control-label">Telefone Fixo</label>
+                <input asp-for="TelefoneFixo" class="form-control" />
+                <span asp-validation-for="TelefoneFixo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Instagram" class="control-label"></label>
+                <input asp-for="Instagram" class="form-control" />
+                <span asp-validation-for="Instagram" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Linkedin" class="control-label"></label>
+                <input asp-for="Linkedin" class="form-control" />
+                <span asp-validation-for="Linkedin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Github" class="control-label"></label>
+                <input asp-for="Github" class="form-control" />
+                <span asp-validation-for="Github" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YouTube" class="control-label"></label>
+                <input asp-for="YouTube" class="form-control" />
+                <span asp-validation-for="YouTube" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CEP" class="control-label"></label>
+                <input asp-for="CEP" class="form-control" />
+                <span asp-validation-for="CEP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rua" class="control-label"></label>
+                <input asp-for="Rua" class="form-control" />
+                <span asp-validation-for="Rua" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bairro" class="control-label"></label>
+                <input asp-for="Bairro" class="form-control" />
+                <span asp-validation-for="Bairro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Numero" class="control-label">Número</label>
+                <input asp-for="Numero" class="form-control" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cidade" class="control-label"></label>
+                <input asp-for="Cidade" class="form-control" />
+                <span asp-validation-for="Cidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estado" class="control-label"></label>
+                <input asp-for="Estado" class="form-control" />
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CPF" class="control-label"></label>
+                <input asp-for="CPF" class="form-control" />
+                <span asp-validation-for="CPF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RG" class="control-label"></label>
+                <input asp-for="RG" class="form-control" />
+                <span asp-validation-for="RG" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataNascimento" class="control-label">Data de Nascimento</label>
+                <input asp-for="DataNascimento" class="form-control" />
+                <span asp-validation-for="DataNascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="EstáContratado" /> @Html.DisplayNameFor(model => model.EstáContratado)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescricaoCandidato" class="control-label">Descrição</label>
+                <input asp-for="DescricaoCandidato" class="form-control" />
+                <span asp-validation-for="DescricaoCandidato" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Empresa" class="control-label">Emprego Atual</label>
+                <input asp-for="Empresa" class="form-control" />
+                <span asp-validation-for="Empresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Escolaridade" class="control-label"></label>
+                <input asp-for="Escolaridade" class="form-control" />
+                <span asp-validation-for="Escolaridade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoCivil" class="control-label">Estado Civil</label>
+                <input asp-for="EstadoCivil" class="form-control" />
+                <span asp-validation-for="EstadoCivil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sexo" class="control-label"></label>
+                <input asp-for="Sexo" class="form-control" />
+                <span asp-validation-for="Sexo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Senioridade" class="control-label"></label>
+                <input asp-for="Senioridade" class="form-control" />
+                <span asp-validation-for="Senioridade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Usuario.EMail" class="control-label">Insira seu E-Mail Novamente</label>
+                <input asp-for="Usuario.EMail" class="form-control" />
+                <span asp-validation-for="Usuario.EMail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Usuario.Password" class="control-label">Insira sua Senha Novamente</label>
+                <input asp-for="Usuario.Password" class="form-control" />
+                <span asp-validation-for="Usuario.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PretencaoSalarialMinima" class="control-label">Salário Mínimo</label>
+                <input asp-for="PretencaoSalarialMinima" class="form-control" />
+                <span asp-validation-for="PretencaoSalarialMinima" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PretencaoSalarialMaxima" class="control-label">Salário Máximo</label>
+                <input asp-for="PretencaoSalarialMaxima" class="form-control" />
+                <span asp-validation-for="PretencaoSalarialMaxima" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-controller="Project" asp-action="Create" type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

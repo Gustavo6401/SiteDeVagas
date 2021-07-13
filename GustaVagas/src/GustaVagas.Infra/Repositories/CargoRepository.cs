@@ -19,5 +19,9 @@ namespace GustaVagas.Infra.Repositories
         {
             return Db.Cargo.Where(t => t.Nome.Contains(nome));
         }
+        public Cargo ProcurarCargo(string nome)
+        {
+            return Db.Cargo.FirstOrDefault(t => t.Nome.Contains(nome));
+        }
     }
 }

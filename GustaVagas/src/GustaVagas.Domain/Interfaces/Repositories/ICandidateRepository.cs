@@ -22,5 +22,7 @@ namespace GustaVagas.Domain.Interfaces.Repositories
                                   string empresa,
                                   decimal salarioMinimo,
                                   decimal salarioMaximo);
+
+        Candidate BuscarPorCPF(string cpf);
     }
 }

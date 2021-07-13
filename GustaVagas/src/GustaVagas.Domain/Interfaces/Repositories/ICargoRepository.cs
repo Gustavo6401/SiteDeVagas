@@ -9,5 +9,6 @@ namespace GustaVagas.Domain.Interfaces.Repositories
     {
         IEnumerable<Cargo> ProcurarPorNome(string nome);
         IEnumerable<Cargo> ProcurarPorArea(string area);
+        Cargo ProcurarCargo(string nome);
     }
 }

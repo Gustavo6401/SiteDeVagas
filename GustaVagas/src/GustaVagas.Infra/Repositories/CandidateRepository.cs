@@ -21,6 +21,10 @@ namespace GustaVagas.Infra.Repositories
                                                ||   t.PretencaoSalarialMinima >= salarioMinimo
                                                ||   t.PretencaoSalarialMaxima <= salarioMaximo);
         }
+        public Candidate BuscarPorCPF(string cpf)
+        {
+            return Db.Candidate.FirstOrDefault(t => t.CPF.Contains(cpf));
+        }
 
         public IEnumerable<Candidate> ProcurarPorArea(string nome)
         {

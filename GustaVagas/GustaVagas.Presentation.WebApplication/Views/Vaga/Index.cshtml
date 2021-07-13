@@ -1,0 +1,120 @@
+﻿@model IEnumerable<GustaVagas.Domain.Entities.Vaga>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroVagas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Senioridade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Escolaridade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoVaga)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocalEntrevista)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Remoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Temporario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Freelance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PessoaJuridica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEnterprise)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdArea)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroVagas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Senioridade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Escolaridade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoVaga)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocalEntrevista)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Temporario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Freelance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PessoaJuridica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEnterprise)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdArea)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -16,11 +16,15 @@ namespace GustaVagas.Infra.Repositories
             return Db.Project.Where(t => t.Area.NameArea.Contains(area));
         }
 
-        public IEnumerable<Project> BuscarPorAutor(string nome)
+        public IEnumerable<Project> BuscarPorAutor(string cpf)
         {
-            return Db.Project.Where(t => t.Candidato.Name.Contains(nome));
+            return Db.Project.Where(t => t.Candidato.CPF.Contains(cpf));
         }
 
+        public IEnumerable<Project> BuscarPorEmpresa(string cnpj)
+        {
+            return Db.Project.Where(t => t.Empresa.CNPJ.Contains(cnpj));
+        }
         public IEnumerable<Project> BuscarPorNome(string nome)
         {
             throw new NotImplementedException();

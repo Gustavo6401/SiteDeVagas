@@ -7,7 +7,8 @@ namespace GustaVagas.Domain.Interfaces.Repositories
 {
     public interface IProjectRepository : IRepository<Project>
     {
-        IEnumerable<Project> BuscarPorAutor(string nome);
+        IEnumerable<Project> BuscarPorAutor(string cpf);
+        IEnumerable<Project> BuscarPorEmpresa(string cnpj);
         IEnumerable<Project> BuscarPorNome(string nome);
         IEnumerable<Project> BuscarPorUrl(string url);
         IEnumerable<Project> BuscarPorTipo(string tipo);

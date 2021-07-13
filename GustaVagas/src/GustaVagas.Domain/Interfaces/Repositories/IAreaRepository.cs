@@ -7,6 +7,7 @@ namespace GustaVagas.Domain.Interfaces.Repositories
 {
     public interface IAreaRepository
     {
-        IEnumerable<Area> ProcurarPorNome(string nome);        
+        IEnumerable<Area> ProcurarPorNome(string nome);
+        Area ProcurarArea(string nome);
     }
 }

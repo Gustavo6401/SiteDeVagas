@@ -25,8 +25,9 @@ namespace GustaVagas.Domain.Entities
         public bool Remoto { get; set; }
         public bool Temporario { get; set; }
         public bool Freelance { get; set; }
-        // Caso o candidato seja uma pessoa jurídica, ele poderá ativar esse filtro.
+        // Caso a vaga seja destinada para pessoa jurídica, o contratante deverá marcar este campo.
         public bool PessoaJuridica { get; set; }
+        public Candidate Candidate { get; set; }
         public Enterprise Enterprise { get; set; }
         public Cargo Cargo { get; set; }
         public Area Area { get; set; }
