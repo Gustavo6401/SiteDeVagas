@@ -5,9 +5,8 @@ using GustaVagas.Domain.Interfaces.Repositories.Base;
 
 namespace GustaVagas.Domain.Interfaces.Repositories
 {
-    public interface ICargoUserRepository : IRepository<CargoUser>
+    public interface IFormacaoRepository : IRepository<Formacao>
     {
-        IEnumerable<CargoUser> BuscarPorCargo(string cargo);
-        IEnumerable<CargoUser> BuscarPorUsuario(string cpf);
+        Formacao ProcurarPorCandidato(string cpf);
     }
 }

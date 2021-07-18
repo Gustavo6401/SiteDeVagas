@@ -5,25 +5,25 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1 class="titulo">Index</h1>
 
-<p>
+<p class="textao">
     <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Nome
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                E-Mail
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Celular)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TelefoneFixo)
+                Telefone Fixo
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Instagram)
@@ -47,7 +47,7 @@
                 @Html.DisplayNameFor(model => model.Bairro)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Numero)
+                Número
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Cidade)
@@ -62,13 +62,13 @@
                 @Html.DisplayNameFor(model => model.RG)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataNascimento)
+                Data de Nascimento
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EstáContratado)
+                Está Contratado?
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DescricaoCandidato)
+                Descrição
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Empresa)
@@ -77,7 +77,7 @@
                 @Html.DisplayNameFor(model => model.Escolaridade)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EstadoCivil)
+                Estado Civil
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Sexo)
@@ -86,13 +86,13 @@
                 @Html.DisplayNameFor(model => model.Senioridade)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Usuario.Id)
+                Código do Usuário
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PretencaoSalarialMinima)
+                Pretenção Salarial Mínima
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PretencaoSalarialMaxima)
+                Pretenção Salarial Máxima
             </th>
             <th></th>
         </tr>
@@ -152,7 +152,7 @@
                 @Html.DisplayFor(modelItem => item.DataNascimento)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EstáContratado)
+                @Html.DisplayFor(modelItem => item.EstaContratado)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DescricaoCandidato)

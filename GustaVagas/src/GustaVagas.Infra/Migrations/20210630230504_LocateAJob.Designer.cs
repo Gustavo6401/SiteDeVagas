@@ -112,7 +112,7 @@ namespace GustaVagas.Infra.Migrations
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
 
-                    b.Property<bool>("EstáContratado")
+                    b.Property<bool>("EstaContratado")
                         .HasColumnType("bit");
 
                     b.Property<string>("Github")

@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 class="titulo">Create</h1>
+<h1 class="titulo">Cadastrar</h1>
 
 <h4 class="subtitulo">Vaga</h4>
 <hr />
@@ -19,17 +19,17 @@
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
+                <label asp-for="Descricao" class="control-label">Descrição</label>
                 <input asp-for="Descricao" class="form-control" />
                 <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Salario" class="control-label"></label>
+                <label asp-for="Salario" class="control-label">Salário</label>
                 <input asp-for="Salario" class="form-control" />
                 <span asp-validation-for="Salario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NumeroVagas" class="control-label"></label>
+                <label asp-for="NumeroVagas" class="control-label">Número de Vagas</label>
                 <input asp-for="NumeroVagas" class="form-control" />
                 <span asp-validation-for="NumeroVagas" class="text-danger"></span>
             </div>
@@ -44,32 +44,36 @@
                 <span asp-validation-for="Escolaridade" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EstadoVaga" class="control-label"></label>
+                <label asp-for="EstadoVaga" class="control-label">Estado da Vaga</label>
                 <select asp-for="EstadoVaga" class="form-control"></select>
                 <span asp-validation-for="EstadoVaga" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LocalEntrevista" class="control-label"></label>
+                <label asp-for="LocalEntrevista" class="control-label">Local de Entrevista</label>
                 <input asp-for="LocalEntrevista" class="form-control" />
                 <span asp-validation-for="LocalEntrevista" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
+                    Vaga Remota?
                     <input class="form-check-input" asp-for="Remoto" /> @Html.DisplayNameFor(model => model.Remoto)
                 </label>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
+                    Emprego Temporário?
                     <input class="form-check-input" asp-for="Temporario" /> @Html.DisplayNameFor(model => model.Temporario)
                 </label>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
+                    Trabalho Freelance?
                     <input class="form-check-input" asp-for="Freelance" /> @Html.DisplayNameFor(model => model.Freelance)
                 </label>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
+                    Feito para Empresas?
                     <input class="form-check-input" asp-for="PessoaJuridica" /> @Html.DisplayNameFor(model => model.PessoaJuridica)
                 </label>
             </div>

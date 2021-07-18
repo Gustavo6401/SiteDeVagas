@@ -9,9 +9,9 @@ using GustaVagas.Domain.Entities;
 
 namespace GustaVagas.Presentation.WebApplication.Controllers
 {
-    public class ProjectController : Controller
+    public class FormacaoController : Controller
     {
-        // GET: ProjectController
+        // GET: FormacaoController
         public ActionResult Index()
         {
             return View();
@@ -19,57 +19,38 @@ namespace GustaVagas.Presentation.WebApplication.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(Project project)
+        public ActionResult Index(Formacao formacao)
         {
-            if(project.PessoaJuridica)
-            {
-                ProjectRepository repository = new();
-                return View(repository.BuscarPorAutor(project.Candidato.CPF));
-            }
-            else
-            {
-                ProjectRepository repository = new();
-                return View(repository.BuscarPorEmpresa(project.Empresa.CNPJ));
-            }            
+            ProjectRepository repository = new();
+            return View(repository.BuscarPorAutor(formacao.Candidate.CPF));
         }
 
-        // GET: ProjectController/Details/5
+        // GET: FormacaoController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: ProjectController/Create
+        // GET: FormacaoController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: ProjectController/Create
+        // POST: FormacaoController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind] Project project)
+        public ActionResult Create([Bind] Formacao formacao)
         {
             try
             {
                 CandidateRepository candidateRepository = new();
-                EnterpriseRepository enterpriseRepository = new();
-                Candidate candidate;
-                Enterprise enterprise;
+                Candidate candidate = candidateRepository.BuscarPorCPF(formacao.Candidate.CPF);
 
-                if (project.PessoaJuridica)
-                {
-                    enterprise = enterpriseRepository.BuscarPorCNPJ(project.Empresa.CNPJ);
-                    project.Empresa.Id = enterprise.Id;
-                }
-                else
-                {                     
-                    candidate = candidateRepository.BuscarPorCPF(project.Candidato.CPF);
-                    project.Candidato.Id = candidate.Id;
-                }
+                formacao.Candidate.Id = candidate.Id;
 
-                ProjectRepository repository = new();
-                repository.Add(project);
+                FormacaoRepository repository = new();
+                repository.Add(formacao);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -79,13 +60,13 @@ namespace GustaVagas.Presentation.WebApplication.Controllers
             }
         }
 
-        // GET: ProjectController/Edit/5
+        // GET: FormacaoController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: ProjectController/Edit/5
+        // POST: FormacaoController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -100,13 +81,13 @@ namespace GustaVagas.Presentation.WebApplication.Controllers
             }
         }
 
-        // GET: ProjectController/Delete/5
+        // GET: FormacaoController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: ProjectController/Delete/5
+        // POST: FormacaoController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

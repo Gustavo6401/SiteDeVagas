@@ -1,0 +1,44 @@
+﻿@model GustaVagas.Domain.Entities.Formacao
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="titulo">Create</h1>
+
+<h4 class="subtitulo">Formacao</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TipoEnsino" class="control-label">Tipo de Ensino</label>
+                <input asp-for="TipoEnsino" class="form-control" />
+                <span asp-validation-for="TipoEnsino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grau" class="control-label"></label>
+                <input asp-for="Grau" class="form-control" />
+                <span asp-validation-for="Grau" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insituicao" class="control-label">Instituição</label>
+                <input asp-for="Insituicao" class="form-control" />
+                <span asp-validation-for="Insituicao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-controller="AreaUser" asp-action="Create" type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

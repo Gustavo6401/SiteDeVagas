@@ -28,7 +28,7 @@ namespace GustaVagas.Presentation.WebApplication.Controllers
         // POST: CandidateController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind("Id,Name,Email,Celular,TelefoneFixo,Instagram,Linkedin,Github,Youtube,CEP,Rua,Numero,Cidade,Estado,CPF,RG,DataNascimento,EstáContratado,Descricao,Empresa,Escolaridade,EstadoCivil,Sexo,Senioridade,Usuario,PretencaoSalarialMinima,PretencaoSalarialMaxima")] Candidate pessoa)
+        public ActionResult Create([Bind("Id,Name,Email,Celular,TelefoneFixo,Instagram,Linkedin,Github,Youtube,CEP,Rua,Numero,Cidade,Estado,CPF,RG,DataNascimento,EstaContratado,Descricao,Empresa,Escolaridade,EstadoCivil,Sexo,Senioridade,Usuario,PretencaoSalarialMinima,PretencaoSalarialMaxima")] Candidate pessoa)
         {
             try
             {
@@ -39,6 +39,55 @@ namespace GustaVagas.Presentation.WebApplication.Controllers
 
                 CandidateRepository repository = new();
                 repository.Add(pessoa);
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: CandidateController/Details
+        public ActionResult Details(int id)
+        {
+            return View();
+        }
+
+        // GET: CandidateController/Edit
+        public ActionResult Edit(int id)
+        {
+            return View();
+        }
+
+        public ActionResult Edit(int id, Candidate candidate)
+        {
+            try
+            {
+                CandidateRepository repository = new();
+                repository.Update(candidate);
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        public ActionResult Delete()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(Candidate candidate)
+        {
+            try
+            {
+                CandidateRepository repository = new();
+                repository.Delete(candidate);
 
                 return RedirectToAction(nameof(Index));
             }

@@ -14,12 +14,12 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
+                <label asp-for="Name" class="control-label">Nome</label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EMail" class="control-label"></label>
+                <label asp-for="EMail" class="control-label">E-Mail</label>
                 <input asp-for="EMail" class="form-control" />
                 <span asp-validation-for="EMail" class="text-danger"></span>
             </div>
@@ -64,22 +64,22 @@
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="País" class="control-label"></label>
-                <input asp-for="País" class="form-control" />
-                <span asp-validation-for="País" class="text-danger"></span>
+                <label asp-for="Pais" class="control-label">País</label>
+                <input asp-for="Pais" class="form-control" />
+                <span asp-validation-for="Pais" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Usuario.EMail" class="control-label"></label>
+                <label asp-for="Usuario.EMail" class="control-label">Digite Novamente seu E-Mail</label>
                 <input asp-for="Usuario.EMail" class="form-control" />
                 <span asp-validation-for="Usuario.EMail" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Usuario.Password" class="control-label"></label>
+                <label asp-for="Usuario.Password" class="control-label">Digite Novamente sua Senha</label>
                 <input asp-for="Usuario.Password" class="form-control" />
                 <span asp-validation-for="Usuario.Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input asp-controller="Project" asp-action="Create" type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>

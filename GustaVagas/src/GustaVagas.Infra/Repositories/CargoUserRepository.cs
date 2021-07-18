@@ -10,11 +10,16 @@ namespace GustaVagas.Infra.Repositories
 {
     public class CargoUserRepository : Repository<CargoUser>, ICargoUserRepository
     {
+        VagasContext Db = new();
+
         public IEnumerable<CargoUser> BuscarPorCargo(string cargo)
         {
-            VagasContext Db = new();
-
             return Db.CargoUser.Where(t => t.Cargo.Nome.Contains(cargo));
+        }
+
+        public IEnumerable<CargoUser> BuscarPorUsuario(string cpf)
+        {
+            return Db.CargoUser.Where(t => t.Candidate.CPF.Contains(cpf));
         }
     }
 }

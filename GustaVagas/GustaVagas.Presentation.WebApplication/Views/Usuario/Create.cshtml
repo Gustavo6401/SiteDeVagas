@@ -19,20 +19,20 @@
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EMail" class="textao"></label>
+                <label asp-for="EMail" class="textao">E-Mail</label>
                 <input asp-for="EMail" class="form-control" />
                 <span asp-validation-for="EMail" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Password" class="textao"></label>
+                <label asp-for="Password" class="textao">Senha</label>
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Cadastrar Pessoa Física" class="btn btn-primary" />
+                <input asp-controller="Candidate" asp-action="Create" type="submit" value="Cadastrar Pessoa Física" class="btn btn-primary" />
             </div>
             <div class="form-group">
-                <input type="submit" value="Cadastrar Pessoa Jurídica" class="btn btn-primary" />
+                <input asp-controller="Enterprise" asp-action="Create" type="submit" value="Cadastrar Pessoa Jurídica" class="btn btn-primary" />
             </div>
         </form>
     </div>

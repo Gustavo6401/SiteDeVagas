@@ -39,7 +39,7 @@ namespace GustaVagas.Domain.Entities
         public string RG { get; set; }
         [DataType("date")]
         public DateTime DataNascimento { get; set; }
-        public bool EstáContratado { get; set; }
+        public bool EstaContratado { get; set; }
         [DataType("nvarchar(max)")]
         public string DescricaoCandidato { get; set; }
         [StringLength(25)]

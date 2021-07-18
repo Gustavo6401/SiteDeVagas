@@ -14,6 +14,6 @@ namespace GustaVagas.Domain.Entities
         public int UserId { get; set; }
 
         public Area Area { get; set; }
-        public Usuario User { get; set; }
+        public Candidate Candidate { get; set; }
     }
 }

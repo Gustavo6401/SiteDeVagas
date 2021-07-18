@@ -1,20 +1,20 @@
 ﻿@model GustaVagas.Domain.Entities.Candidate
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 class="titulo">Cadastrar</h1>
+<h1 class="titulo">Edit</h1>
 
-<h4 class="subtitulo">Pessoa Física</h4>
+<h4 class="subtitulo">Candidate</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label">Nome Completo</label>
+                <label asp-for="Name" class="control-label">Nome</label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
@@ -69,7 +69,7 @@
                 <span asp-validation-for="Bairro" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Numero" class="control-label">Número</label>
+                <label asp-for="Numero" class="control-label"></label>
                 <input asp-for="Numero" class="form-control" />
                 <span asp-validation-for="Numero" class="text-danger"></span>
             </div>
@@ -100,7 +100,7 @@
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="EstaContratado" /> @Html.DisplayNameFor(model => model.EstaContratado)
+                    <input class="form-check-input" asp-for="EstaContratado" /> Está Contratado
                 </label>
             </div>
             <div class="form-group">
@@ -109,7 +109,7 @@
                 <span asp-validation-for="DescricaoCandidato" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Empresa" class="control-label">Emprego Atual</label>
+                <label asp-for="Empresa" class="control-label"></label>
                 <input asp-for="Empresa" class="form-control" />
                 <span asp-validation-for="Empresa" class="text-danger"></span>
             </div>
@@ -134,34 +134,26 @@
                 <span asp-validation-for="Senioridade" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Usuario.EMail" class="control-label">Insira seu E-Mail Novamente</label>
-                <input asp-for="Usuario.EMail" class="form-control" />
-                <span asp-validation-for="Usuario.EMail" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Usuario.Password" class="control-label">Insira sua Senha Novamente</label>
-                <input asp-for="Usuario.Password" class="form-control" />
-                <span asp-validation-for="Usuario.Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PretencaoSalarialMinima" class="control-label">Salário Mínimo</label>
+                <label asp-for="PretencaoSalarialMinima" class="control-label">Pretenção Salarial Mínima</label>
                 <input asp-for="PretencaoSalarialMinima" class="form-control" />
                 <span asp-validation-for="PretencaoSalarialMinima" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PretencaoSalarialMaxima" class="control-label">Salário Máximo</label>
+                <label asp-for="PretencaoSalarialMaxima" class="control-label">Pretenção Salarial Máxima</label>
                 <input asp-for="PretencaoSalarialMaxima" class="form-control" />
                 <span asp-validation-for="PretencaoSalarialMaxima" class="text-danger"></span>
             </div>
+            <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <input asp-controller="Project" asp-action="Create" type="submit" value="Cadastrar" class="btn btn-primary" />
+                <input type="submit" value="Editar Dados" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar Para a Lista</a>
+    <a asp-controller="Home" asp-action="Index">Voltar Para a Página Inicial</a>
 </div>
 
 @section Scripts {

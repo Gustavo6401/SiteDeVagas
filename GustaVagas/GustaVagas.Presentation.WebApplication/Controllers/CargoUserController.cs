@@ -9,36 +9,45 @@ using GustaVagas.Domain.Entities;
 
 namespace GustaVagas.Presentation.WebApplication.Controllers
 {
-    public class AreaController : Controller
+    public class CargoUserController : Controller
     {
-        // GET: AreaController
-        public ActionResult Index(string nome)
+        // GET: CargoUserController
+        public ActionResult Index(string cpf)
         {
-            AreaRepository repository = new();
-            return View(repository.ProcurarPorNome(nome));
+            CargoUserRepository repository = new();
+            return View(repository.BuscarPorUsuario(cpf));
         }
 
-        // GET: AreaController/Details/5
+        // GET: CargoUserController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: AreaController/Create
+        // GET: CargoUserController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: AreaController/Create
+        // POST: CargoUserController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind("Id,NameArea")] Area area)
+        public ActionResult Create([Bind] CargoUser cargoUsuario)
         {
             try
             {
-                AreaRepository repository = new();
-                repository.Add(area);
+                CargoRepository cargoRepository = new();
+                Cargo cargo = cargoRepository.ProcurarCargo(cargoUsuario.Cargo.Nome);
+
+                CandidateRepository candidateRepository = new();
+                Candidate candidate = candidateRepository.BuscarPorCPF(cargoUsuario.Candidate.CPF);
+
+                cargoUsuario.Cargo.Id = cargo.Id;
+                cargoUsuario.Candidate.Id = candidate.Id;
+
+                CargoUserRepository repository = new();
+                repository.Add(cargoUsuario);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -48,19 +57,22 @@ namespace GustaVagas.Presentation.WebApplication.Controllers
             }
         }
 
-        // GET: AreaController/Edit/5
+        // GET: CargoUserController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: AreaController/Edit/5
+        // POST: CargoUserController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(CargoUser cargoUser)
         {
             try
             {
+                CargoUserRepository repository = new();
+                repository.Update(cargoUser);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -69,19 +81,19 @@ namespace GustaVagas.Presentation.WebApplication.Controllers
             }
         }
 
-        // GET: AreaController/Delete/5
+        // GET: CargoUserController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: AreaController/Delete/5
+        // POST: CargoUserController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, CargoUser cargoUser)
         {
             try
-            {
+            {                
                 return RedirectToAction(nameof(Index));
             }
             catch
